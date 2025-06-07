@@ -33,6 +33,11 @@ public enum BaseErrorCode implements StatusCode {
     FAIL_LOGIN(401, HttpStatus.UNAUTHORIZED, "아이디 또는 비밀번호를 확인해주세요"),
     ACCOUNT_LOCKED(401, HttpStatus.UNAUTHORIZED, "계정이 잠겨 있습니다. 나중에 다시 시도하세요."),
     REDIS_ERROR(500, HttpStatus.INTERNAL_SERVER_ERROR, "세션 저장에 실패했어요"),
+    PLACE_NOT_FOUND(404, HttpStatus.NOT_FOUND, "장소를 찾을 수 없어요"),
+    INVALID_PLACE_NUM(400, HttpStatus.BAD_REQUEST, "장소 등록은 최대 5개까지 가능해요"),
+    PROMISE_NOT_FOUND(404, HttpStatus.NOT_FOUND, "약속을 찾을 수 없어요"),
+    PROMISE_MANGER_FORBIDDEN(403, HttpStatus.FORBIDDEN, "약속장에 대한 접근 권한이 없어요"),
+    VOTE_NUM_MAX(400, HttpStatus.BAD_REQUEST, "더이상 투표할 수 없어요"),
 
 
     //그룹 에러
